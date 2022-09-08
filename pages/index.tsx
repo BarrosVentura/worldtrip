@@ -9,6 +9,7 @@ import {
   Museum,
   Surf,
 } from "../assets/Icons";
+import { ContinentSwiper } from "../components/ContinentSwiper";
 import { Header } from "../components/Header";
 import { TravelType } from "../components/TravelType";
 
@@ -69,6 +70,24 @@ const Home: NextPage = () => {
           <Earth />
         </TravelType>
       </Flex>
+      <Flex
+        px={36}
+        py={14}
+        flexDir="column"
+        justifyContent="center"
+        alignItems="center"
+        text-align="center"
+      >
+        <Text fontWeight={500} fontSize="4xl">
+          Vamos nessa?
+        </Text>
+        <Text fontWeight={500} fontSize="4xl">
+          Então escolha seu continente
+        </Text>
+      </Flex>
+      <Box px={36}>
+        <ContinentSwiper />
+      </Box>
     </Box>
   );
 };
