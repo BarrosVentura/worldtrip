@@ -1,7 +1,16 @@
 import { Box, Flex, Stack, Text } from "@chakra-ui/react";
 import type { NextPage } from "next";
-import { Airplane, Logo } from "../assets/Icons";
+import {
+  Airplane,
+  Building,
+  Cocktail,
+  Earth,
+  Logo,
+  Museum,
+  Surf,
+} from "../assets/Icons";
 import { Header } from "../components/Header";
+import { TravelType } from "../components/TravelType";
 
 const Home: NextPage = () => {
   return (
@@ -12,7 +21,7 @@ const Home: NextPage = () => {
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
-        justifyContent="center"
+        justifyContent="space-between"
         alignItems="center"
         gap={200}
         px={36}
@@ -26,6 +35,39 @@ const Home: NextPage = () => {
           </Text>
         </Box>
         <Airplane mb="-24" />
+      </Flex>
+      <Flex
+        px={36}
+        py={20}
+        justifyContent="space-between"
+        flexWrap="wrap"
+        position="relative"
+        _after={{
+          content: `""`,
+          position: "absolute",
+          width: "90px",
+          height: "2px",
+          bottom: 0,
+          bg: "gray.800",
+          left: "50%",
+          transform: "translate(-50%,0)",
+        }}
+      >
+        <TravelType subtitle="vida noturna">
+          <Cocktail />
+        </TravelType>
+        <TravelType subtitle="praia">
+          <Surf />
+        </TravelType>
+        <TravelType subtitle="moderno">
+          <Building />
+        </TravelType>
+        <TravelType subtitle="clássico">
+          <Museum />
+        </TravelType>
+        <TravelType subtitle="e mais...">
+          <Earth />
+        </TravelType>
       </Flex>
     </Box>
   );
