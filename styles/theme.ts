@@ -10,4 +10,10 @@ export const theme = extendTheme({
       fontFamily: "Barlow",
     },
   },
+  colors: {
+    gray: {
+      50: "#F5F8FA",
+      200: "#DADADA",
+    },
+  },
 });
