@@ -21,7 +21,7 @@ const Home: NextPage = () => {
           <Text fontWeight="medium" fontSize="4xl" color="gray.50" maxW={426}>
             5 Continentes, infinitas possibilidades.
           </Text>
-          <Text fontSize="larger" color="gray.200" maxW={524}>
+          <Text fontSize="larger" color="gray.200" maxW={524} pt={5}>
             Chegou a hora de tirar do papel a viagem que você sempre sonhou.
           </Text>
         </Box>
