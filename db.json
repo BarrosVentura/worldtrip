@@ -1,0 +1,29 @@
+{
+  "continents": [
+    {
+      "name": "América do Norte",
+      "subtitle": "Tenha experiencias incriveis",
+      "background": "https://images.unsplash.com/photo-1563194081-ef73fa8f19be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "name": "América do Sul",
+      "subtitle": "O continente mais diverso, conheca as historias",
+      "background": "https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80"
+    },
+    {
+      "name": "Ásia",
+      "subtitle": "O continente mais exotico",
+      "background": "https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "name": "África",
+      "subtitle": "O continente mais selvagem",
+      "background": "https://images.unsplash.com/photo-1484318571209-661cf29a69c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "name": "Oceania",
+      "subtitle": "O continente de incriveis paisagen",
+      "background": "https://images.unsplash.com/photo-1595263187083-1334b774dfb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1507&q=80"
+    }
+  ]
+}
