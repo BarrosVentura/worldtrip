@@ -4,28 +4,66 @@ import { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+
+import { useEffect, useState } from "react";
+import { chakra, Flex, Text } from "@chakra-ui/react";
+import { SlideNextButton, SlidePrevButton } from "./NavigationButton";
+
+interface ContinentsState {
+  name: string;
+  subtitle: string;
+  background: string;
+}
+
+const ChakraSwiper = chakra(Swiper);
+
 export function ContinentSwiper() {
+  const [continents, setContinents] = useState<ContinentsState[]>([]);
+
+  useEffect(() => {
+    async function getContinents() {
+      const response = await fetch("http://localhost:3333/continents");
+      const data = await response.json();
+      setContinents(data);
+    }
+    getContinents();
+  }, []);
+
   return (
-    <Swiper
-      navigation={true}
-      hashNavigation={{
-        watchState: true,
-      }}
+    <ChakraSwiper
+      modules={[Navigation, Pagination]}
       pagination={{
         clickable: true,
       }}
-      modules={[Navigation, Pagination]}
-      className="mySwiper"
+      h="100%"
+      w="100%"
     >
-      <SwiperSlide data-hash="slide1">Slide 1</SwiperSlide>
-      <SwiperSlide data-hash="slide2">Slide 2</SwiperSlide>
-      <SwiperSlide data-hash="slide3">Slide 3</SwiperSlide>
-      <SwiperSlide data-hash="slide4">Slide 4</SwiperSlide>
-      <SwiperSlide data-hash="slide5">Slide 5</SwiperSlide>
-      <SwiperSlide data-hash="slide6">Slide 6</SwiperSlide>
-      <SwiperSlide data-hash="slide7">Slide 7</SwiperSlide>
-      <SwiperSlide data-hash="slide8">Slide 8</SwiperSlide>
-      <SwiperSlide data-hash="slide9">Slide 9</SwiperSlide>
-    </Swiper>
+      {continents.map(({ name, background, subtitle }) => (
+        <SwiperSlide key={name} data-hash={name}>
+          <Flex
+            backgroundImage={`url(${background})`}
+            backgroundPosition="center"
+            backgroundRepeat="no-repeat"
+            backgroundSize="cover"
+            justifyContent="center"
+            alignItems="center"
+            flexDir="column"
+            gap={4}
+            w="100%"
+            height="100%"
+          >
+            <Text color="gray.50" fontWeight={700} fontSize="5xl">
+              {name}
+            </Text>
+            <Text color="white" fontWeight={700} fontSize="2xl">
+              {subtitle}
+            </Text>
+          </Flex>
+        </SwiperSlide>
+      ))}
+
+      <SlideNextButton />
+      <SlidePrevButton />
+    </ChakraSwiper>
   );
 }
