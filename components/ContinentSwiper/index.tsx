@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 
 import { useEffect, useState } from "react";
 import { chakra, Flex, Text } from "@chakra-ui/react";
-import { SlideNextButton, SlidePrevButton } from "./NavigationButton";
+import { useNavigationButton } from "./NavigationButton";
 
 interface ContinentsState {
   name: string;
@@ -19,6 +19,7 @@ const ChakraSwiper = chakra(Swiper);
 
 export function ContinentSwiper() {
   const [continents, setContinents] = useState<ContinentsState[]>([]);
+  const { SlideNextButton, SlidePrevButton } = useNavigationButton();
 
   useEffect(() => {
     async function getContinents() {

@@ -1,5 +1,5 @@
 import { Button, ChakraProps } from "@chakra-ui/react";
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import { useSwiper } from "swiper/react";
 import { Next, Previous } from "../../../assets/Icons";
 
@@ -7,12 +7,14 @@ interface ChakraSwiperNavigationProps extends ChakraProps {
   onClick: () => void;
   children: ReactElement;
   className: string;
+  isDisabled: boolean;
 }
 
 export function ChakraSwiperNavigation({
   onClick,
   children,
   className,
+  isDisabled,
 }: ChakraSwiperNavigationProps) {
   return (
     <Button
@@ -34,6 +36,14 @@ export function ChakraSwiperNavigation({
       }}
       h={100}
       w={100}
+      isDisabled={isDisabled}
+      _disabled={{
+        filter: "grayscale(90%)",
+        cursor: "not-allowed",
+        _hover: {
+          filter: "grayscale(90%)",
+        },
+      }}
       onClick={onClick}
     >
       {children}
@@ -41,30 +51,49 @@ export function ChakraSwiperNavigation({
   );
 }
 
-export function SlideNextButton(props: ChakraProps) {
-  const swiper = useSwiper();
+export function useNavigationButton() {
+  const [nextDisabled, setNextDisabled] = useState(false);
+  const [prevDisabled, setPrevDisabled] = useState(false);
 
-  return (
-    <ChakraSwiperNavigation
-      className="swiper-button-next"
-      onClick={() => swiper.slideNext()}
-      {...props}
-    >
-      <Next />
-    </ChakraSwiperNavigation>
-  );
-}
+  function SlideNextButton(props: ChakraProps) {
+    const swiper = useSwiper();
+    function handdleClick() {
+      if (swiper.isEnd) setNextDisabled(true);
+      if (prevDisabled) setPrevDisabled(false);
+      swiper.slideNext();
+    }
 
-export function SlidePrevButton(props: ChakraProps) {
-  const swiper = useSwiper();
+    return (
+      <ChakraSwiperNavigation
+        className="swiper-button-next"
+        onClick={() => handdleClick()}
+        isDisabled={nextDisabled}
+        {...props}
+      >
+        <Next />
+      </ChakraSwiperNavigation>
+    );
+  }
 
-  return (
-    <ChakraSwiperNavigation
-      className="swiper-button-prev"
-      onClick={() => swiper.slidePrev()}
-      {...props}
-    >
-      <Previous />
-    </ChakraSwiperNavigation>
-  );
+  function SlidePrevButton(props: ChakraProps) {
+    const swiper = useSwiper();
+    function handdleClick() {
+      if (swiper.isBeginning) setPrevDisabled(true);
+      if (nextDisabled) setNextDisabled(false);
+      swiper.slidePrev();
+    }
+
+    return (
+      <ChakraSwiperNavigation
+        className="swiper-button-prev"
+        onClick={() => handdleClick()}
+        isDisabled={prevDisabled}
+        {...props}
+      >
+        <Previous />
+      </ChakraSwiperNavigation>
+    );
+  }
+
+  return { SlideNextButton, SlidePrevButton };
 }
