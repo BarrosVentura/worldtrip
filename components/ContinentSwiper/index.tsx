@@ -6,13 +6,21 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { useEffect, useState } from "react";
-import { chakra, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
+import {
+  chakra,
+  Flex,
+  Text,
+  useBreakpointValue,
+  Link as ChakraLink,
+} from "@chakra-ui/react";
 import { useNavigationButton } from "./NavigationButton";
+import Link from "next/link";
 
 interface ContinentsState {
   name: string;
   subtitle: string;
   background: string;
+  link: string;
 }
 
 const ChakraSwiper = chakra(Swiper);
@@ -37,38 +45,46 @@ export function ContinentSwiper() {
 
   return (
     <ChakraSwiper modules={[Navigation, Pagination]} h="100%" w="100%">
-      {continents.map(({ name, background, subtitle }) => (
+      {continents.map(({ name, background, subtitle, link }) => (
         <SwiperSlide key={name} data-hash={name}>
-          <Flex
-            backgroundImage={`url(${background})`}
-            backgroundPosition="center"
-            backgroundRepeat="no-repeat"
-            backgroundSize="cover"
-            justifyContent="center"
-            alignItems="center"
-            flexDir="column"
-            gap={4}
-            w="100%"
-            height="100%"
-          >
-            <Text
-              color="gray.50"
-              fontWeight={700}
-              fontSize={isSmall ? "3xl" : "5xl"}
-              textAlign="center"
+          <Link href={`continent/${link}`} passHref>
+            <ChakraLink
+              _hover={{
+                textDecoration: "none",
+              }}
             >
-              {name}
-            </Text>
-            <Text
-              color="white"
-              fontWeight={700}
-              fontSize={isSmall ? "md" : "2xl"}
-              px={isSmall && "60px"}
-              textAlign="center"
-            >
-              {subtitle}
-            </Text>
-          </Flex>
+              <Flex
+                backgroundImage={`url(${background})`}
+                backgroundPosition="center"
+                backgroundRepeat="no-repeat"
+                backgroundSize="cover"
+                justifyContent="center"
+                alignItems="center"
+                flexDir="column"
+                gap={4}
+                w="100%"
+                height="100%"
+              >
+                <Text
+                  color="gray.50"
+                  fontWeight={700}
+                  fontSize={isSmall ? "3xl" : "5xl"}
+                  textAlign="center"
+                >
+                  {name}
+                </Text>
+                <Text
+                  color="white"
+                  fontWeight={700}
+                  fontSize={isSmall ? "md" : "2xl"}
+                  px={isSmall && "60px"}
+                  textAlign="center"
+                >
+                  {subtitle}
+                </Text>
+              </Flex>
+            </ChakraLink>
+          </Link>
         </SwiperSlide>
       ))}
       <SwiperPagination />
