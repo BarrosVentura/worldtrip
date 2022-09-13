@@ -22,7 +22,6 @@ const Home: NextPage = () => {
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
-        px={36}
       >
         <Flex
           justifyContent="space-between"
@@ -43,7 +42,6 @@ const Home: NextPage = () => {
         </Flex>
       </Box>
       <Flex
-        px={36}
         py={20}
         w={1160}
         margin="auto"
@@ -92,7 +90,7 @@ const Home: NextPage = () => {
           Então escolha seu continente
         </Text>
       </Flex>
-      <Box px={36}>
+      <Box maxW={1240} w="100%" h={450} margin="auto" mb={40}>
         <ContinentSwiper />
       </Box>
     </Box>
