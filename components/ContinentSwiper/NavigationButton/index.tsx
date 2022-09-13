@@ -53,14 +53,14 @@ export function ChakraSwiperNavigation({
 
 export function useNavigationButton() {
   const [nextDisabled, setNextDisabled] = useState(false);
-  const [prevDisabled, setPrevDisabled] = useState(false);
+  const [prevDisabled, setPrevDisabled] = useState(true);
 
   function SlideNextButton(props: ChakraProps) {
     const swiper = useSwiper();
     function handdleClick() {
+      swiper.slideNext();
       if (swiper.isEnd) setNextDisabled(true);
       if (prevDisabled) setPrevDisabled(false);
-      swiper.slideNext();
     }
 
     return (
@@ -78,9 +78,9 @@ export function useNavigationButton() {
   function SlidePrevButton(props: ChakraProps) {
     const swiper = useSwiper();
     function handdleClick() {
+      swiper.slidePrev();
       if (swiper.isBeginning) setPrevDisabled(true);
       if (nextDisabled) setNextDisabled(false);
-      swiper.slidePrev();
     }
 
     return (
