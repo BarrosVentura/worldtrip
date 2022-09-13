@@ -1,11 +1,10 @@
-import { Box, Flex, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import {
   Airplane,
   Building,
   Cocktail,
   Earth,
-  Logo,
   Museum,
   Surf,
 } from "../assets/Icons";
@@ -14,6 +13,14 @@ import { Header } from "../components/Header";
 import { TravelType } from "../components/TravelType";
 
 const Home: NextPage = () => {
+  const showPlane = useBreakpointValue({
+    base: false,
+    lg: true,
+  });
+  const isSmall = useBreakpointValue({
+    base: true,
+    md: false,
+  });
   return (
     <Box>
       <Header />
@@ -27,25 +34,40 @@ const Home: NextPage = () => {
           justifyContent="space-between"
           alignItems="center"
           gap={200}
-          w={1160}
+          maxW={1160}
+          px={[6, 4, 4, 4, 0]}
+          w="100%"
           margin="auto"
         >
           <Box py={20}>
-            <Text fontWeight="medium" fontSize="4xl" color="gray.50" maxW={426}>
+            <Text
+              fontWeight="medium"
+              fontSize="4xl"
+              color="gray.50"
+              maxW={showPlane ? 426 : "100%"}
+            >
               5 Continentes, infinitas possibilidades.
             </Text>
-            <Text fontSize="larger" color="gray.200" maxW={524} pt={5}>
+            <Text
+              fontSize="larger"
+              color="gray.200"
+              maxW={showPlane ? 426 : "100%"}
+              pt={5}
+            >
               Chegou a hora de tirar do papel a viagem que você sempre sonhou.
             </Text>
           </Box>
-          <Airplane mb="-24" />
+          {showPlane && <Airplane mb="-24" />}
         </Flex>
       </Box>
       <Flex
         py={20}
-        w={1160}
+        maxW={1160}
+        w="100%"
+        px={[6, 4, 4, 4, 0]}
         margin="auto"
-        justifyContent="space-between"
+        justifyContent={isSmall ? "space-evenly" : "space-between"}
+        gap={isSmall ? 6 : 0}
         flexWrap="wrap"
         position="relative"
         _after={{
@@ -83,14 +105,29 @@ const Home: NextPage = () => {
         alignItems="center"
         text-align="center"
       >
-        <Text fontWeight={500} fontSize="4xl">
+        <Text
+          fontWeight={500}
+          fontSize={isSmall ? "3xl" : "4xl"}
+          textAlign="center"
+        >
           Vamos nessa?
         </Text>
-        <Text fontWeight={500} fontSize="4xl">
+        <Text
+          fontWeight={500}
+          fontSize={isSmall ? "3xl" : "4xl"}
+          textAlign="center"
+        >
           Então escolha seu continente
         </Text>
       </Flex>
-      <Box maxW={1240} w="100%" h={450} margin="auto" mb={40}>
+      <Box
+        maxW={1240}
+        w="100%"
+        h={450}
+        margin="auto"
+        mb={40}
+        px={[2, 4, 4, 4, 0]}
+      >
         <ContinentSwiper />
       </Box>
     </Box>

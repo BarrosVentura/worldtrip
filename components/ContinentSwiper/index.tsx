@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { useEffect, useState } from "react";
-import { chakra, Flex, Text } from "@chakra-ui/react";
+import { chakra, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
 import { useNavigationButton } from "./NavigationButton";
 
 interface ContinentsState {
@@ -18,6 +18,10 @@ interface ContinentsState {
 const ChakraSwiper = chakra(Swiper);
 
 export function ContinentSwiper() {
+  const isSmall = useBreakpointValue({
+    base: true,
+    md: false,
+  });
   const [continents, setContinents] = useState<ContinentsState[]>([]);
   const { SlideNextButton, SlidePrevButton, SwiperPagination } =
     useNavigationButton();
@@ -47,10 +51,21 @@ export function ContinentSwiper() {
             w="100%"
             height="100%"
           >
-            <Text color="gray.50" fontWeight={700} fontSize="5xl">
+            <Text
+              color="gray.50"
+              fontWeight={700}
+              fontSize={isSmall ? "3xl" : "5xl"}
+              textAlign="center"
+            >
               {name}
             </Text>
-            <Text color="white" fontWeight={700} fontSize="2xl">
+            <Text
+              color="white"
+              fontWeight={700}
+              fontSize={isSmall ? "md" : "2xl"}
+              px={isSmall && "60px"}
+              textAlign="center"
+            >
               {subtitle}
             </Text>
           </Flex>
