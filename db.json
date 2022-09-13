@@ -4,31 +4,186 @@
       "name": "América do Norte",
       "subtitle": "Tenha experiencias incriveis",
       "background": "https://images.unsplash.com/photo-1563194081-ef73fa8f19be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "link": "northamerica"
+      "link": "northamerica",
+      "description": "A América do Norte está localizada no extremo norte das Américas e é composta por apenas três países: Estados Unidos, Canadá e México, além de territórios de domínios europeus, como a Groelândia (pertencente ao Reino da Dinamarca, com representação no parlamento) e Bermudas (dependência britânica). Os dois primeiros países são os únicos do continente americano que estão inseridos no grupo dos países mais importantes político e economicamente, especialmente os Estados Unidos, que possuem a condição de maior potência mundial; já o México configura-se como um país em desenvolvimento, ou seja, emergente.",
+      "numberOfCountries": 3,
+      "numberOfCities": 28,
+      "numberOfLanguages": 430,
+      "cities": [
+        {
+          "city": "Toronto",
+          "contry": "Canada",
+          "flag": "teste"
+        },
+        {
+          "city": "Texas",
+          "contry": "Estanos Unidos",
+          "flag": "teste"
+        },
+        {
+          "city": "Ontario",
+          "contry": "Canada",
+          "flag": "teste"
+        },
+        {
+          "city": "Mexico City",
+          "contry": "Mexico",
+          "flag": "teste"
+        },
+        {
+          "city": "Cancun",
+          "contry": "Mexico",
+          "flag": "teste"
+        }
+      ]
     },
     {
       "name": "América do Sul",
       "subtitle": "O continente mais diverso, conheca as historias",
       "background": "https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80",
-      "link": "southamerica"
+      "link": "southamerica",
+      "description": "Com uma extensão de cerca de 17,8 milhões de km², a América do Sul comporta 6% da população mundial dividida em 12 países e 7 territórios. São eles a Argentina, Bolívia, Brasil, Chile, Colômbia, Equador, Guiana, Paraguai, Peru, Suriname, Uruguai e Venezuela e, os territórios da Guiana Francesa, Ilha de Páscoa, Ilhas Galápagos, Ilhas Geórgia e Sandwich e Ilhas Malvinas. Limita-se ao norte com a América Central, à leste com o oceano atlântico e à oeste com o oceano pacífico.",
+      "numberOfCountries": 12,
+      "numberOfCities": 80,
+      "numberOfLanguages": 448,
+      "cities": [
+        {
+          "city": "Rio de Janeiro",
+          "contry": "Brasil",
+          "flag": "teste"
+        },
+        {
+          "city": "Pernambuco",
+          "contry": "Brasil",
+          "flag": "teste"
+        },
+        {
+          "city": "Buenos Aires",
+          "contry": "Argentina",
+          "flag": "teste"
+        },
+        {
+          "city": "Bogota",
+          "contry": "Colombia",
+          "flag": "teste"
+        },
+        {
+          "city": "Lima",
+          "contry": "Peru",
+          "flag": "teste"
+        }
+      ]
     },
     {
       "name": "Ásia",
       "subtitle": "O continente mais exotico",
       "background": "https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "link": "asia"
+      "link": "asia",
+      "description": "A Ásia é o maior dos continentes, tanto em área como em população. Abrange um terço das partes sólidas da superfície da Terra e é responsável por abrigar quase três quintos da população mundial. A Ásia faz fronteira no lado ocidental com a África e com a Europa, e no lado oriental com o oceano Pacífico, a Oceania e, em menor proporção, com a América do Norte, pelo Estreito de Bering.",
+      "numberOfCountries": 48,
+      "numberOfCities": 33,
+      "numberOfLanguages": 2300,
+      "cities": [
+        {
+          "city": "Mumbai",
+          "contry": "India",
+          "flag": "teste"
+        },
+        {
+          "city": "Baghdad",
+          "contry": "Iraque",
+          "flag": "teste"
+        },
+        {
+          "city": "Okazaki",
+          "contry": "Japao",
+          "flag": "teste"
+        },
+        {
+          "city": "George Town",
+          "contry": "Malasia",
+          "flag": "teste"
+        },
+        {
+          "city": "Istanbul",
+          "contry": "Turquia",
+          "flag": "teste"
+        }
+      ]
     },
     {
       "name": "África",
       "subtitle": "O continente mais selvagem",
       "background": "https://images.unsplash.com/photo-1484318571209-661cf29a69c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "link": "africa"
+      "link": "africa",
+      "description": "A África é o terceiro continente mais extenso (depois da Ásia e da América) com cerca de 30 milhões de quilômetros quadrados, cobrindo 20,3% da área total da terra firme do planeta. É o segundo continente mais populoso da Terra (atrás da Ásia) com cerca de um bilhão de pessoas (estimativa para 2005), representando cerca de um sétimo da população mundial, e 54 países independentes. Tem se transformado na ultima década em uma continente cada vez mais católico.",
+      "numberOfCountries": 54,
+      "numberOfCities": 120,
+      "numberOfLanguages": 2000,
+      "cities": [
+        {
+          "city": "Kinshasa",
+          "contry": "Congo",
+          "flag": "teste"
+        },
+        {
+          "city": "Lagos",
+          "contry": "Nigeria",
+          "flag": "teste"
+        },
+        {
+          "city": "Cairo",
+          "contry": "Egito",
+          "flag": "teste"
+        },
+        {
+          "city": "Giza",
+          "contry": "Egito",
+          "flag": "teste"
+        },
+        {
+          "city": "Luanda",
+          "contry": "Angola",
+          "flag": "teste"
+        }
+      ]
     },
     {
       "name": "Oceania",
       "subtitle": "O continente de incriveis paisagen",
       "background": "https://images.unsplash.com/photo-1595263187083-1334b774dfb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1507&q=80",
-      "link": "oceania"
+      "link": "oceania",
+      "description": "Oceania ou Oceânia é uma região geográfica composta por vários grupos de ilhas do oceano Pacífico (Polinésia, Melanésia e Micronésia). O termo Oceania foi criado em 1831 pelo explorador francês Dumont d'Urville. O termo é usado hoje em vários idiomas para designar uma região geográfica e política que compreende o continente da Austrália e ilhas do Oceano Pacífico adjacentes.",
+      "numberOfCountries": 14,
+      "numberOfCities": 123,
+      "numberOfLanguages": 450,
+      "cities": [
+        {
+          "city": "Auckland",
+          "contry": "Nova Zelandia",
+          "flag": "teste"
+        },
+        {
+          "city": "Brisbane",
+          "contry": "Australia",
+          "flag": "teste"
+        },
+        {
+          "city": "Gold Coast",
+          "contry": "Australia",
+          "flag": "teste"
+        },
+        {
+          "city": "Canberra",
+          "contry": "Australia",
+          "flag": "teste"
+        },
+        {
+          "city": "Jayapura",
+          "contry": "Indonesia",
+          "flag": "teste"
+        }
+      ]
     }
   ]
 }
