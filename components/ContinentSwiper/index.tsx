@@ -19,7 +19,8 @@ const ChakraSwiper = chakra(Swiper);
 
 export function ContinentSwiper() {
   const [continents, setContinents] = useState<ContinentsState[]>([]);
-  const { SlideNextButton, SlidePrevButton } = useNavigationButton();
+  const { SlideNextButton, SlidePrevButton, SwiperPagination } =
+    useNavigationButton();
 
   useEffect(() => {
     async function getContinents() {
@@ -31,14 +32,7 @@ export function ContinentSwiper() {
   }, []);
 
   return (
-    <ChakraSwiper
-      modules={[Navigation, Pagination]}
-      pagination={{
-        clickable: true,
-      }}
-      h="100%"
-      w="100%"
-    >
+    <ChakraSwiper modules={[Navigation, Pagination]} h="100%" w="100%">
       {continents.map(({ name, background, subtitle }) => (
         <SwiperSlide key={name} data-hash={name}>
           <Flex
@@ -62,7 +56,7 @@ export function ContinentSwiper() {
           </Flex>
         </SwiperSlide>
       ))}
-
+      <SwiperPagination />
       <SlideNextButton />
       <SlidePrevButton />
     </ChakraSwiper>

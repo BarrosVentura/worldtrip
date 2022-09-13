@@ -1,4 +1,4 @@
-import { Button, ChakraProps } from "@chakra-ui/react";
+import { Box, Button, ChakraProps } from "@chakra-ui/react";
 import { ReactElement, useState } from "react";
 import { useSwiper } from "swiper/react";
 import { Next, Previous } from "../../../assets/Icons";
@@ -52,22 +52,20 @@ export function ChakraSwiperNavigation({
 }
 
 export function useNavigationButton() {
-  const [nextDisabled, setNextDisabled] = useState(false);
-  const [prevDisabled, setPrevDisabled] = useState(true);
+  const [paginationPosition, setPaginationPosition] = useState(0);
 
   function SlideNextButton(props: ChakraProps) {
     const swiper = useSwiper();
     function handdleClick() {
       swiper.slideNext();
-      if (swiper.isEnd) setNextDisabled(true);
-      if (prevDisabled) setPrevDisabled(false);
+      setPaginationPosition(swiper.activeIndex);
     }
 
     return (
       <ChakraSwiperNavigation
         className="swiper-button-next"
         onClick={() => handdleClick()}
-        isDisabled={nextDisabled}
+        isDisabled={swiper.isEnd}
         {...props}
       >
         <Next />
@@ -79,15 +77,14 @@ export function useNavigationButton() {
     const swiper = useSwiper();
     function handdleClick() {
       swiper.slidePrev();
-      if (swiper.isBeginning) setPrevDisabled(true);
-      if (nextDisabled) setNextDisabled(false);
+      setPaginationPosition(swiper.activeIndex);
     }
 
     return (
       <ChakraSwiperNavigation
         className="swiper-button-prev"
         onClick={() => handdleClick()}
-        isDisabled={prevDisabled}
+        isDisabled={swiper.isBeginning}
         {...props}
       >
         <Previous />
@@ -95,5 +92,37 @@ export function useNavigationButton() {
     );
   }
 
-  return { SlideNextButton, SlidePrevButton };
+  function SwiperPagination() {
+    const swiper = useSwiper();
+    const slides = swiper.slides.map((item) => item);
+
+    function handleClick(position: number) {
+      swiper.slideTo(position);
+      setPaginationPosition(position);
+    }
+
+    return (
+      <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+        {slides.map((slide, index) => (
+          <Box
+            key={`swiper-pagination-${index}`}
+            className={`swiper-pagination-bullet ${
+              index === paginationPosition
+                ? "swiper-pagination-bullet-active"
+                : ""
+            }`}
+            backgroundColor={
+              index === paginationPosition ? "yellow.500" : "gray.900"
+            }
+            opacity="1"
+            h={4}
+            w={4}
+            onClick={() => handleClick(index)}
+          ></Box>
+        ))}
+      </div>
+    );
+  }
+
+  return { SlideNextButton, SlidePrevButton, SwiperPagination };
 }
