@@ -7,6 +7,7 @@ import { Museum } from "./Museum";
 import { Surf } from "./Surf";
 import { Next } from "./Next";
 import { Previous } from "./Previous";
+import { Back } from "./Back";
 
 export {
   Airplane,
@@ -18,4 +19,5 @@ export {
   Next,
   Surf,
   Previous,
+  Back,
 };
