@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Tooltip } from "@chakra-ui/react";
+import { Box, Flex, Text, Tooltip, useBreakpointValue } from "@chakra-ui/react";
 import { Info } from "../../assets/Icons";
 
 interface NumberHighlightProps {
@@ -12,10 +12,14 @@ export function NumberHighlight({
   subtitle,
   label,
 }: NumberHighlightProps) {
+  const isSmall = useBreakpointValue({
+    base: true,
+    md: false,
+  });
   return (
     <Flex
       justifyContent="center"
-      alignItems="center"
+      alignItems={isSmall ? "start" : "center"}
       flexDir="column"
       lineHeight="shorter"
     >
