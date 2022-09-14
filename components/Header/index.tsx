@@ -11,6 +11,8 @@ export function Header() {
     <Grid
       as="header"
       w="100%"
+      maxW={1160}
+      margin="auto"
       gridTemplateColumns="1fr 1fr"
       justifyContent="center"
       alignItems="center"

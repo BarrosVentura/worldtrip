@@ -8,6 +8,7 @@ import { Surf } from "./Surf";
 import { Next } from "./Next";
 import { Previous } from "./Previous";
 import { Back } from "./Back";
+import { Info } from "./Info";
 
 export {
   Airplane,
@@ -20,4 +21,5 @@ export {
   Surf,
   Previous,
   Back,
+  Info,
 };
