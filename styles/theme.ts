@@ -13,12 +13,20 @@ export const theme = extendTheme({
   colors: {
     gray: {
       50: "#F5F8FA",
+      100: "##F5F8FA",
       200: "#DADADA",
+      300: "#999999",
       800: "#47585B",
-      900: "#999999",
     },
     yellow: {
       400: "#FFBA08",
+    },
+  },
+  styles: {
+    global: {
+      body: {
+        bg: "gray.100",
+      },
     },
   },
 });

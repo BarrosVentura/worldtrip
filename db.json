@@ -14,27 +14,27 @@
         {
           "city": "Toronto",
           "country": "Canada",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "Texas",
           "country": "Estados Unidos",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "Ontario",
           "country": "Canada",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "Mexico City",
           "country": "Mexico",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "Cancun",
           "country": "Mexico",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         }
       ]
     },
@@ -45,34 +45,34 @@
       "link": "southamerica",
       "description": "Com uma extensão de cerca de 17,8 milhões de km², a América do Sul comporta 6% da população mundial dividida em 12 países e 7 territórios. São eles a Argentina, Bolívia, Brasil, Chile, Colômbia, Equador, Guiana, Paraguai, Peru, Suriname, Uruguai e Venezuela e, os territórios da Guiana Francesa, Ilha de Páscoa, Ilhas Galápagos, Ilhas Geórgia e Sandwich e Ilhas Malvinas.",
       "numberOfCountries": 12,
-      "numberOfCities": 22,
+      "numberOfCities": 80,
       "numberOfLanguages": 448,
       "numberOFTopCities": 15,
       "cities": [
         {
           "city": "Rio de Janeiro",
           "country": "Brasil",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "Pernambuco",
           "country": "Brasil",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "Buenos Aires",
           "country": "Argentina",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "Bogota",
           "country": "Colombia",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "Lima",
           "country": "Peru",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         }
       ]
     },
@@ -90,27 +90,27 @@
         {
           "city": "Mumbai",
           "country": "India",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "Baghdad",
           "country": "Iraque",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "Okazaki",
           "country": "Japao",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "George Town",
           "country": "Malasia",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "Istanbul",
           "country": "Turquia",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         }
       ]
     },
@@ -128,27 +128,27 @@
         {
           "city": "Kinshasa",
           "country": "Congo",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "Lagos",
           "country": "Nigeria",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "Cairo",
           "country": "Egito",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "Giza",
           "country": "Egito",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "Luanda",
           "country": "Angola",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         }
       ]
     },
@@ -166,27 +166,27 @@
         {
           "city": "Auckland",
           "country": "Nova Zelandia",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "Brisbane",
           "country": "Australia",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "Gold Coast",
           "country": "Australia",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "Canberra",
           "country": "Australia",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         },
         {
           "city": "Jayapura",
           "country": "Indonesia",
-          "flag": "teste"
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
         }
       ]
     }

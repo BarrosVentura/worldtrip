@@ -112,7 +112,7 @@ export function useNavigationButton() {
                 : ""
             }`}
             backgroundColor={
-              index === paginationPosition ? "yellow.500" : "gray.900"
+              index === paginationPosition ? "yellow.500" : "gray.300"
             }
             opacity="1"
             h={4}

@@ -1,4 +1,12 @@
-import { Box, Flex, Grid, HStack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Grid,
+  GridItem,
+  HStack,
+  Image,
+  Text,
+} from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Header } from "../../components/Header";
@@ -57,7 +65,13 @@ export default function Continent() {
         mb={20}
       >
         <Flex w="100%" h="100%" maxW={1140} margin="auto" alignItems="flex-end">
-          <Text fontSize="5xl" fontWeight="semibold" color="gray.50" mb={16}>
+          <Text
+            as="h1"
+            fontSize="5xl"
+            fontWeight="semibold"
+            color="gray.50"
+            mb={16}
+          >
             {pageContent.name}
           </Text>
         </Flex>
@@ -69,6 +83,7 @@ export default function Continent() {
         margin="auto"
         gridTemplateColumns="1fr 1fr"
         gap={70}
+        mb={20}
       >
         <Box>
           <Text fontSize="2xl" color="gray.800">
@@ -91,6 +106,55 @@ export default function Continent() {
           />
         </HStack>
       </Grid>
+      <Box w="100%" h="100%" maxW={1140} margin="auto" mb={16}>
+        <Text
+          as="h2"
+          fontSize="4xl"
+          fontWeight="medium"
+          color="gray.800"
+          mb={16}
+        >
+          Cidades +100
+        </Text>
+        <Grid gridTemplateColumns="1fr 1fr 1fr 1fr" gap={12}>
+          {pageContent.cities.map((item) => (
+            <GridItem key={item.city}>
+              <Image
+                src={pageContent.background}
+                alt=""
+                borderTopLeftRadius={4}
+                borderTopRightRadius={4}
+              />
+              <Flex
+                p={6}
+                border="1px solid"
+                borderColor="yellow.400"
+                borderRadius={4}
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                <Flex flexDir="column" gap={3}>
+                  <Text fontSize="larger" color="gray.800">
+                    {item.city}
+                  </Text>
+                  <Text fontSize="medium" color="gray.300">
+                    {item.country}
+                  </Text>
+                </Flex>
+                <Box>
+                  <Image
+                    w={7}
+                    h={7}
+                    borderRadius="50%"
+                    src={item.flag}
+                    alt=""
+                  />
+                </Box>
+              </Flex>
+            </GridItem>
+          ))}
+        </Grid>
+      </Box>
     </Box>
   );
 }
