@@ -31,17 +31,27 @@ export function ContinentSwiper() {
     md: false,
   });
   const [continents, setContinents] = useState<ContinentsState[]>([]);
+  const [loading, setLoading] = useState(true);
   const { SlideNextButton, SlidePrevButton, SwiperPagination } =
     useNavigationButton();
 
   useEffect(() => {
     async function getContinents() {
-      const response = await fetch("http://localhost:3333/continents");
-      const data = await response.json();
-      setContinents(data);
+      try {
+        const response = await fetch("http://localhost:3333/continents");
+        const data = await response.json();
+        setContinents(data);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
     }
     getContinents();
   }, []);
+
+  if (loading) {
+    return <div>Carregando...</div>;
+  }
 
   return (
     <ChakraSwiper modules={[Navigation, Pagination]} h="100%" w="100%">
